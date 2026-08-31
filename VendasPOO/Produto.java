@@ -28,10 +28,10 @@ public class Produto {
 
     @Override
     public String toString() {
-        return "\nProduto: " +
-                "\ncodigo - " + getCodigo() +
+        return "\nDescrição do produto: " +
+                "\ncódigo - " + getCodigo() +
                 "\nnome - " + getNome() +
-                "\npreco - " + getPreco();
+                "\npreço - " + " R$ " + getPreco();
         
     }
 }

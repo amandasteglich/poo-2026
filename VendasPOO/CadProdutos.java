@@ -36,14 +36,6 @@ public class CadProdutos {
         }
 
         public String toString() {
-        /*String aux = "\nCadastro de Clientes\n- - - - - - - - - - -\n";
-        for (Cliente umCliente : lista) {
-            aux = aux + umCliente.toString() + "\n";
-            //aux += umCliente.toString() + "\n";
-
-        }
-        return aux;*/
-
             StringBuilder aux = new StringBuilder("\nCadastro de Produtos\n- - - - - - - - - - -\n");
             for (Produto umProd : lista) {
                 aux.append( umProd.toString() + "\n");

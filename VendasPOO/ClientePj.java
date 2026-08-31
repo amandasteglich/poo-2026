@@ -6,7 +6,14 @@ public class ClientePj extends Cliente {
     this.cnpj = umCNPJ;
   }
 
-  public String getCNPJ() { return cnpj; }
+  public String getCNPJ() { 
+    return cnpj; 
+  }
+
+  @Override
+    public String getID() {
+        return cnpj;
+    }
 
   @Override
   public String toString() {
