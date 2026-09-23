@@ -27,17 +27,14 @@ public class CadastroImoveis {
         }
     }
 
-    // Lista imóveis cujo proprietário corresponde ao nome informado
     public void listar(String nome){
         for(Imovel imovel : lista){
             if(imovel.getProprietario() != null && imovel.getProprietario().equals(nome)){
-                // imprime representação do próprio objeto
                 System.out.println(imovel.toString());
-                // exemplo de tratamento por tipo
                 if(imovel instanceof Residencial){
-                    System.out.println("(Residencial)");
+                    System.out.println("Residencial");
                 } else if(imovel instanceof Comercial){
-                    System.out.println("(Comercial)");
+                    System.out.println("Comercial");
                 }
             }
         }

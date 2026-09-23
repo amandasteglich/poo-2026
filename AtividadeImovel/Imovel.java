@@ -1,13 +1,15 @@
 public abstract class Imovel {
+
     private String proprietario;
     private int areaConstruida;
     private Geo geo;
+
     private static double VR = 50;
 
-    public Imovel(String umproprietario, int umaArea, double umageolocalizacao) {
+    public Imovel(String umproprietario, int umaArea, Geo umageolocalizacao) {
         this.proprietario = umproprietario;
         this.areaConstruida = umaArea;
-        this.geo = geo;
+        this.geo = umageolocalizacao;
     }
 
     public String getProprietario() {
@@ -18,16 +20,20 @@ public abstract class Imovel {
         return areaConstruida;
     }
 
+    public static double getVR() {
+        return VR;
+    }
+
     public static void setVR(double novoVR) {
         VR = novoVR;
     }
 
     public abstract double calculaImposto();
 
-
-    public String toString(){
-        return "\n Proprietário do imóvel : " + proprietario +
-                "\n Área construída: " + areaConstruida +
-                "\n Geolocalização: " + geo;
+    @Override
+    public String toString() {
+        return "\nProprietário do imóvel: " + proprietario +
+               "\nÁrea construída: " + areaConstruida +
+               "\nGeolocalização: " + geo;
     }
 }

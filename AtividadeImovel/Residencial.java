@@ -3,11 +3,11 @@ class Residencial extends Imovel {
     private int areaTerreno;
 
     public Residencial(String proprietario, int areaConstruida,
-                       Geo geo, int areaTerreno) {
+                   Geo geo, int areaTerreno) {
 
-        super(proprietario, geo, areaConstruida);
-        this.areaTerreno = areaTerreno;
-    }
+    super(proprietario, areaConstruida, geo);
+    this.areaTerreno = areaTerreno;
+}
 
     public int getAreaTerreno() {
         return areaTerreno;
@@ -18,8 +18,8 @@ class Residencial extends Imovel {
         if(getAreaConstruida()>200){
             imposto = (getAreaConstruida() - 200) *getVR();
         }
-        else if(getAreaConstruida()> 100){
-            imposto += 100 * getVR();
+        else if(getAreaConstruida()> 1000){
+            imposto += 1000 * getVR();
         }
         return imposto;
     }
@@ -27,7 +27,7 @@ class Residencial extends Imovel {
     @Override
     public String toString(){
         String vrExtra;
-        if(getAreaConstruida()> 100){
+        if(getAreaConstruida()> 1000){
             vrExtra = " há um imposto adicional";
         }
         else{
@@ -36,4 +36,5 @@ class Residencial extends Imovel {
         return super.toString() + vrExtra;
     }
 }
+//polimorfismo residencial e comercial pq existe um areferincia do imovel
 
